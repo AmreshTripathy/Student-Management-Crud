@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Management-Crud</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    
+    <div class="header-logo-text">Student Management CRUD</div>
+
+    <!-- Form -->
+
+    <form class="form" onclick="event.preventDefault();">
+        <!-- Name -->
+        <div class="input-box">
+            <input type="text" id="name" placeholder="Name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="input-box">
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+
+        <!-- GPA -->
+        <div class="input-box">
+            <input type="number" min="0" max="10" step="0.1" id="gpa" placeholder="GPA" required>
+        </div>
+
+        <!-- Age -->
+        <div class="input-box">
+            <input type="number" min="0" max="40" id="age" placeholder="Age" required>
+        </div>
+
+        <!-- Degree -->
+        <div class="input-box">
+            <input type="text" id="degree" placeholder="Degree" required>
+        </div>
+
+        <!-- Submit -->
+        <div class="submit" id="submit" onclick="onFormSubmit()">Add Student
+        </div>
+    </form>
+
+    <!-- Search Section -->
+
+    <div class="search">
+        <input type="search" id="search" placeholder="Search By Name, email or degree">
+    </div>
+
+    <!-- Table Section -->
+
+    <table id="stdlist" class="js-serial">
+        <!-- Header -->
+        <thead>
+            <tr>
+                <th class="id">ID</th>
+                <th class="name">Student Name</th>
+                <th class="email">Email</th>
+                <th class="age">Age</th>
+                <th class="GPA">GPA</th>
+                <th class="degree">Degree</th>
+            </tr>
+        </thead>
+        <!-- Body -->
+        <tbody id="body-section">
+        </tbody>
+    </table>
+
+    <script src="/script.js"></script>
+</body>
+</html>

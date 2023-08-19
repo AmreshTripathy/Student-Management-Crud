@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #111;
+    font-family: 'Inter';
+}
+
+.header-logo-text {
+    color: #FFF;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin-top: 10px;
+    margin-left: 35px;
+    padding: 1px;
+}
+
+.form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5em 2.5em;
+    width: 95vw;
+}
+
+.input-box {
+    display: flex;
+    border: 1px solid gray;
+    width: 29vw;
+    height: 6vh;
+    border-radius: 2px;
+}
+
+.input-box>input {
+    border: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.50);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    width: 40vw;
+    height: 6vh;
+    border-radius: 2px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 5px;
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+.submit>input:hover {
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    border: 1px solid gray;
+    width: 95vw;
+    height: 6vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-inline: auto;
+    border-radius: 2px;
+    margin-top: 40px;
+}
+
+.search>input {
+    border: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgba(255, 255, 255, 0.50);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 100%;
+}
+
+input[type="search"] {
+    background: none;
+    border: none;
+}
+
+table {
+    margin-top: 40px;
+    width: 95vw;
+    height: 45vh;
+    margin-inline: auto;
+    border: 1px solid gray;
+    border-spacing: 0;
+    counter-reset: serial-number;
+    display: flex;  
+    flex-direction: column;
+}
+
+table td:first-child:before {
+    counter-increment: serial-number;  /* Increment the serial number counter */
+    content: counter(serial-number);  /* Display the counter */
+}
+
+thead {
+    color: whitesmoke;
+    font-size: 15px;
+    font-style: normal;
+    line-height: normal;
+}
+
+tr {
+    height: 7vh;
+    width: fit-content;
+}
+
+th {
+    font-weight: normal;
+    text-align: left;
+    padding-left: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.id {
+    width: 4vw;
+    border-right: 1px solid gray;
+}
+
+.name {
+    width: 26vw;
+    border-right: 1px solid gray;
+}
+
+.email {
+    width: 26vw;
+    border-right: 1px solid gray;
+}
+
+.age {
+    width: 10vw;
+    border-right: 1px solid gray;
+}
+
+.GPA {
+    width: 10vw;
+    border-right: 1px solid gray;
+}
+
+.degree {
+    width: 20vw;
+}
+
+tbody {
+    color: whitesmoke;
+    font-size: 15px;
+    font-style: normal;
+    line-height: normal;
+    overflow-y: auto;
+}
+
+tbody::-webkit-scrollbar {
+    display: none;
+}
+
+td {
+    font-weight: normal;
+    text-align: left;
+    padding-left: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.degree-1 {
+    width: 19.75vw;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.degree-1>div>img:hover {
+    cursor: pointer;
+}
