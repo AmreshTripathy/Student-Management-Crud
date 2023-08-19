@@ -89,6 +89,7 @@ function resetForm() {
     document.getElementById("degree").value = "";
 
     selectedRow = null;
+    document.getElementById("submit").innerHTML = "Add Student";
 }
 
 // Edit Section
