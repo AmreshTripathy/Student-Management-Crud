@@ -63,7 +63,7 @@ input:focus {
     line-height: normal;
 }
 
-.submit {
+.submit-1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,11 +78,27 @@ input:focus {
     padding: 5px;
 }
 
-.submit:hover {
+.submit-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.50);
+    border: 1px solid gray;
+    width: 40vw;
+    height: 6vh;
+    border-radius: 2px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 5px;
+}
+
+.submit-1:hover {
     cursor: pointer;
 }
 
-.submit>input:hover {
+.submit-2:hover {
     cursor: pointer;
 }
 

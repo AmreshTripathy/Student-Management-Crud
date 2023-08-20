@@ -90,12 +90,14 @@ function resetForm() {
 
     selectedRow = null;
     document.getElementById("submit").innerHTML = "Add Student";
+    document.getElementById("submit").setAttribute("class", "submit-1");
 }
 
 // Edit Section
 function onEdit(td) {
 
     document.getElementById("submit").innerHTML = "Edit Student";
+    document.getElementById("submit").setAttribute("class", "submit-2");
 
     selectedRow = td.parentElement.parentElement.parentElement;
     document.getElementById("name").value = selectedRow.cells[1].innerHTML;
