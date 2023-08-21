@@ -5,6 +5,19 @@ var selectedRow = null
 function onFormSubmit() {
 
     if (!validate()) {
+
+        if (!validateName()) {
+            return;
+        } else if (!validateEmail()) {
+            return;
+        } else if (!validateGpa()) {
+            return;
+        }else if (!validateAge()) {
+            return;
+        }else if (!validateDegree()) {
+            return;
+        }
+
         var formData = getFormData();
 
         if (selectedRow == null) {
@@ -36,6 +49,59 @@ function validate() {
     }
 
     return isValid;
+}
+
+function validateName() {
+    let name = document.getElementById("name");
+    let nameRegex =  /^([a-zA-Z]+)\s*([a-zA-Z]*)$/gi;
+    if (!name.value.match(nameRegex)) {
+        alert("Please provide your name without any special character or digit!")
+        return false;
+    }
+
+    return true;
+}
+
+function validateEmail() {
+    let email = document.getElementById("email");
+    let emailRegex = /([\w\.-]+)\@*([\w\-]*)\.(\w{2,3})/gi;
+    if (!email.value.match(emailRegex)) {
+        alert("Please give your email correctly!")
+        return false;
+    }
+
+    return true;
+}
+
+function validateGpa() {
+    let gpa = document.getElementById("gpa");
+    if (gpa.value > 10) {
+        alert("Gpa should be in between 0 to 10");
+        return false;
+    }
+
+    return true;
+}
+
+function validateAge() {
+    let age = document.getElementById("age");
+    if (!(age.value >= 18 && age.value <= 40)) {
+        alert("Age should be in between 18 to 40");
+        return false;
+    }
+
+    return true;
+}
+
+function validateDegree() {
+    let degree = document.getElementById("degree");
+    let degreeRegex = /^([a-zA-Z\.]+)$/gi;
+    if (!degree.value.match(degreeRegex)) {
+        alert("Please give your degree name in sort form or without any number");
+        return false;
+    }
+
+    return true;
 }
 
 function getFormData() {
@@ -79,6 +145,7 @@ function insertRowInTable(data) {
     </div>
     <td>`;
     cell6.setAttribute("class", "degree-1");
+    cell6.children[1].children[0].setAttribute("class", "img-1");
 }
 
 function resetForm() {
@@ -123,6 +190,8 @@ function updateRecord(formData) {
     </div>
     <td>`;
     selectedRow.cells[5].setAttribute("class", "degree-1");
+    selectedRow.cells[5].children[1].children[0].setAttribute("class", "img-1");
+
 }
 
 // delete function
@@ -135,7 +204,7 @@ function onDelete(td) {
 }
 
 function searchTable() {
-    var input, filter, table, tr, td, i, txtValue;
+    var input, filter, table, tr, i;
     input = document.getElementById("search");
     filter = input.value.toUpperCase();
     table = document.getElementById("body-section");
